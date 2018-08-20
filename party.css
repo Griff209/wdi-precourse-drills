@@ -1,0 +1,25 @@
+@import url("site.css");
+
+@keyframes lights {
+  from {background-color: aliceblue;}
+  to {background-color: brown;}
+}
+@keyframes dancingHeader {
+  0% {left: 0px; top: 100px}
+  25% {left: 100px; top: 0px;}
+  50% {left: 200px; top: 50px;}
+  75% {left: 50px; top: 0px;}
+  100% {left: 100px; top: 100px}
+}
+body {
+  background-color: aliceblue;
+  animation-name: lights;
+  animation-duration: 5s;
+  animation-iteration-count: infinite
+}
+
+body>header {
+  animation-name: dancingHeader;
+  animation-duration: 8s;
+  animation-iteration-count: infinite
+}

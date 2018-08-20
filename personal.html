@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <title>Personal</title>
-        <link rel="stylesheet" type="text/css" href="site.css">
+        <link id="style" rel="stylesheet" type="text/css" href="site.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./party.js"></script>
     </head>
     <body>
         <header>
@@ -10,26 +12,30 @@
                 <a href="professional.html">Professional</a>
             </nav>
         </header>
-        <section>
-            <header>
-                <h1>Home</h1>
-                <p>A bit about my homes of past and present</p>
-            </header>
-            <p>Born in Manteca, CA I moved to nearby Stockton for school. 
-              I've followed friends, dreams and jobs all over the west coast,
-              and now I'm in Nederland, living the mountain life and nurturing 
-              my developing developer skills.</p>
-        </section>
-        <section>
-            <header>
-                <h1>Hobbies</h1>
-                <p>Things I enjoy</p>
-            </header>
-            <ul>
-                <li>Walking: Everywhere</li>
-                <li>Coding</li>
-                <li>Reading: Zen Buddhism, Time Travel, Mysteries</li>
-            </ul>
-        </section>
+        <main>
+            <section>
+                <header>
+                    <h1>Home</h1>
+                    <p>A bit about my homes of past and present</p>
+                </header>
+                <p>
+                    Born in Manteca, CA I moved to nearby Stockton for school. I've followed friends, dreams and jobs all over the west coast, and now I'm in Nederland, living the mountain life and nurturing my developing developer skills.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h1>Hobbies</h1>
+                    <p>Things I enjoy</p>
+                </header>
+                <ul>
+                    <li>Walking: Everywhere</li>
+                    <li>Coding</li>
+                    <li>Reading: Zen Buddhism, Time Travel, Mysteries</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+                <button type="button" onclick="startParty()">Start a "PARTY"</button>
+        </footer>
     </body>
 </html>
