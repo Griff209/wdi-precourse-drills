@@ -7,6 +7,6 @@ function loadPartyStyle() {
 }
 
 function startParty() {
-  loadPartyStyle();
+  loadPartyStyle()
   $('main').before(boomBox)
 }
