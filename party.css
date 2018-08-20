@@ -13,6 +13,7 @@
   75% {left: 50px; top: 0px;}
   100% {left: 100px; top: 100px}
 }
+
 body {
   background-color: aliceblue;
   animation-name: lights;
