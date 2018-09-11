@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
   function loadProStyle() {
-    document.getElementById("style").setAttribute('href', 'professional.css')
+    document.getElementById("style").setAttribute('href', 'pro.css')
       return Promise.resolve(true)
   }
   
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let box = document.getElementById('boomBox')
       ?  document.getElementById('boomBox')
       :  createBoomBox()
-      
+
     return Promise.resolve(box)
   } 
   
