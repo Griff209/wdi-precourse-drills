@@ -31,12 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function loadBoomBox() {
-    let box
-    if (document.getElementById('boomBox')) {
-      box = document.getElementById('boomBox')
-    } else {
-      box = createBoomBox()
-    } 
+    let box = document.getElementById('boomBox')
+      ?  document.getElementById('boomBox')
+      :  createBoomBox()
+      
     return Promise.resolve(box)
   } 
   
