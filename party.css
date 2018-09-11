@@ -6,6 +6,7 @@
   66% {background-color: red;}
 }
 
+<<<<<<< HEAD
 @keyframes dancingHeader {
   0% {left: 0px; top: 100px}
   25% {left: 100px; top: 0px;}
@@ -14,12 +15,15 @@
   100% {left: 100px; top: 100px}
 }
 
+=======
+>>>>>>> 84ab3080098544718ed0fc062d1462fe60907ea8
 body {
   background-color: aliceblue;
   animation-name: lights;
   animation-duration: 0.5s;
   animation-iteration-count: infinite
 }
+<<<<<<< HEAD
 
 body>header {
   display: relative;
@@ -27,3 +31,5 @@ body>header {
   animation-duration: 8s;
   animation-iteration-count: infinite
 }
+=======
+>>>>>>> 84ab3080098544718ed0fc062d1462fe60907ea8

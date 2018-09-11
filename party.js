@@ -13,9 +13,16 @@ function loadPartyStyle() {
     .setAttribute('href', 'party.css'))
 }
 
+<<<<<<< HEAD
 function loadBoomBox() {
   const musicSrc = 'https://ia802808.us.archive.org/29/items/01.OneMoreTime/01.%20One%20More%20Time.ogg'
   const boomBox = `<audio autoplay><source src=${musicSrc} type="audio/ogg"></audio>`
   document.querySelector('main').insertBefore(boomBox)
 } 
 
+=======
+function startParty() {
+  loadPartyStyle()
+  $('main').before(boomBox)
+}
+>>>>>>> 84ab3080098544718ed0fc062d1462fe60907ea8
