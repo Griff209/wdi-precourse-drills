@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("party").addEventListener("click", startParty)
+})
+
 function startParty() {
   loadPartyStyle()
     .then(loadBoomBox)

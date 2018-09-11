@@ -1,3 +1,5 @@
+@import url("site.css");
+
 @keyframes lights {
   0% {background-color: aliceblue;}
   33% {background-color: brown;}
@@ -25,5 +27,3 @@ body>header {
   animation-duration: 8s;
   animation-iteration-count: infinite
 }
-
-@import url("site.css");
