@@ -1,5 +1,3 @@
-@import url("site.css");
-
 @keyframes lights {
   0% {background-color: aliceblue;}
   33% {background-color: brown;}
@@ -13,6 +11,7 @@
   75% {left: 50px; top: 0px;}
   100% {left: 100px; top: 100px}
 }
+
 body {
   background-color: aliceblue;
   animation-name: lights;
@@ -21,7 +20,10 @@ body {
 }
 
 body>header {
+  display: relative;
   animation-name: dancingHeader;
   animation-duration: 8s;
   animation-iteration-count: infinite
 }
+
+@import url("site.css");

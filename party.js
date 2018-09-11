@@ -1,12 +1,17 @@
-let musicSrc = 'https://ia802808.us.archive.org/29/items/01.OneMoreTime/01.%20One%20More%20Time.ogg'
-let boomBox = `<audio autoplay><source src=${musicSrc} type="audio/ogg"></audio>`
+function startParty() {
+  loadPartyStyle()
+    .then(loadBoomBox)
+    .catch(error => document.querySelector('main').insertBefore(`<p>Error: ${error}</p>`))
+}
 
 function loadPartyStyle() {
-  let style = $("#style")
-  style.attr('href', 'party.css')
+  return Promise.resolve(document.getElementById("style")
+    .setAttribute('href', 'party.css'))
 }
 
-function startParty() {
-  loadPartyStyle();
-  $('main').before(boomBox)
-}
+function loadBoomBox() {
+  const musicSrc = 'https://ia802808.us.archive.org/29/items/01.OneMoreTime/01.%20One%20More%20Time.ogg'
+  const boomBox = `<audio autoplay><source src=${musicSrc} type="audio/ogg"></audio>`
+  document.querySelector('main').insertBefore(boomBox)
+} 
+
