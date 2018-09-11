@@ -31,10 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function loadBoomBox() {
-    let box = document.getElementById('boomBox')
+    return document.getElementById('boomBox')
       ||  createBoomBox()
-
-    return Promise.resolve(box)
   } 
   
   function createBoomBox() {
