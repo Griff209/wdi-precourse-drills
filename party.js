@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  document.getElementById("startParty").addEventListener("click", () => {
+  document.getElementById("startParty")
+  .addEventListener("click", () => {
     loadPartyStyle()
     .then(loadBoomBox)
     .catch(error => document.querySelector('main').insertBefore(`<p>Error: ${error}</p>`))
   })
 
-  document.getElementById("stopParty").addEventListener("click", () => {
+  document.getElementById("stopParty")
+  .addEventListener("click", () => {
     loadProStyle()
     .then(loadBoomBox)
     .then(unloadBoomBox)
@@ -23,20 +25,27 @@ document.addEventListener("DOMContentLoaded", () => {
       return Promise.resolve(true)
   }
   
+  function unloadBoomBox(boomBox) {
+    document.querySelector('main').removeChild(boomBox)
+  }
+
+
   function loadBoomBox() {
     let box
-    if (!document.getElementById('boomBox')) {
-      box = document.createElement('div')
-      box.setAttribute('id', 'boomBox')
-      box.innerHTML += `<audio controls><source src="https://ia802808.us.archive.org/29/items/01.OneMoreTime/01.%20One%20More%20Time.ogg" type="audio/ogg"></audio>`
-      document.querySelector('main').appendChild(box)
-    } else {
+    if (document.getElementById('boomBox')) {
       box = document.getElementById('boomBox')
+    } else {
+      box = createBoomBox()
     } 
     return Promise.resolve(box)
   } 
   
-  function unloadBoomBox(boomBox) {
-    document.querySelector('main').removeChild(boomBox)
+  function createBoomBox() {
+    const container = document.createElement('div')
+    container.setAttribute('id', 'boomBox')
+    container.innerHTML += `<audio controls><source src="https://ia802808.us.archive.org/29/items/01.OneMoreTime/01.%20One%20More%20Time.ogg" type="audio/ogg"></audio>`
+    document.querySelector('main').appendChild(container)
+
+    return container
   }
 })
